@@ -1,5 +1,6 @@
 <?php
-include_once "../layoutExterno.php";
+include_once $_SERVER["DOCUMENT_ROOT"] . "/MN_ECC/Views/layoutExterno.php";
+include_once $_SERVER["DOCUMENT_ROOT"] . "/MN_ECC/Controllers/HomeController.php";
 ?>
 
 <!DOCTYPE html>
@@ -50,20 +51,32 @@ MostrarCSS();
                                 <div class="col-lg-6">
                                     <div class="signin-wrapper">
                                         <div class="form-wrapper">
+
+                                            <?php
+                                                if (isset($_POST["Mensaje"])) {
+                                                    echo    
+                                                        '<div class="alert alert-danger text-center" role="alert">
+                                                            ' . $_POST["Mensaje"] . '
+                                                        </div>';
+                                                }
+                                            ?>
+
                                             <h3 class="mb-15">Iniciar Sesión</h3>
                                          
-                                            <form action="#">
+                                            <form id="formLogin" action="" method="POST">
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="input-style-1">
-                                                            <label>Identificación</label>
-                                                            <input type="text" placeholder="Identificación" />
+                                                            <label>Correo Electrónico</label>
+                                                            <input type="text" placeholder="Correo Electrónico"
+                                                            id="CorreoElectronico" name="CorreoElectronico" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="input-style-1">
                                                             <label>Contraseña</label>
-                                                            <input type="password" placeholder="Contraseña" />
+                                                            <input type="password" placeholder="Contraseña"
+                                                            id="Contrasenna" name="Contrasenna" />
                                                         </div>
                                                     </div>
                                                     
@@ -76,17 +89,19 @@ MostrarCSS();
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="button-group d-flex justify-content-center flex-wrap">
-                                                            <button class="main-btn primary-btn btn-hover w-100 text-center">
+                                                            <button type="submit" class="main-btn primary-btn btn-hover w-100 text-center"
+                                                            id="btnIniciarSesion" name="btnIniciarSesion">
                                                                 Procesar
                                                             </button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </form>
+
                                             <div class="singin-option pt-40">                                         
                                                 <p class="text-sm text-medium text-dark text-center">
                                                     No tiene una cuenta aún?
-                                                    <a href="registro.php">Regístrate</a>
+                                                    <a href="registro.php">Registrarse</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -109,6 +124,8 @@ MostrarCSS();
     <?php
     MostrarJS();
     ?>
+    <script src="../assets/funciones/login.js"></script>
+
 </body>
 
 </html>
