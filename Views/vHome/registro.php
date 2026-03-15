@@ -1,6 +1,6 @@
 <?php
-include_once $_SERVER["DOCUMENT_ROOT"] . "/MN_ECC/Views/layoutExterno.php";
-include_once $_SERVER["DOCUMENT_ROOT"] . "/MN_ECC/Controllers/HomeController.php";
+include_once $_SERVER["DOCUMENT_ROOT"] . "/Portafolio_Ambiente_web/Views/layoutExterno.php";
+include_once $_SERVER["DOCUMENT_ROOT"] . "/Portafolio_Ambiente_web/Controllers/HomeController.php";
 ?>
 
 <!DOCTYPE html>

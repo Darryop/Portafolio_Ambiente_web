@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER["DOCUMENT_ROOT"] . "/MN_ECC/Models/UtilitarioModel.php";
+include_once $_SERVER["DOCUMENT_ROOT"] . "/Portafolio_Ambiente_web/Models/UtilitarioModel.php";
 
 function RegistrarModel($identificacion, $nombre, $contrasenna, $correoElectroncio)
 {

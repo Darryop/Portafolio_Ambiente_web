@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER["DOCUMENT_ROOT"] . "/MN_ECC/Views/layout.php";
+include_once $_SERVER["DOCUMENT_ROOT"] . "/Portafolio_Ambiente_web/Views/layout.php";
 ?>
 
 <!DOCTYPE html>
@@ -33,20 +33,6 @@ MostrarCSS();
             <div class="col-md-6">
               <div class="title">
                 <h2>Inicio</h2>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="breadcrumb-wrapper">
-                <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                      <a href="#0">Dashboard</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">
-                      Page
-                    </li>
-                  </ol>
-                </nav>
               </div>
             </div>
           </div>
