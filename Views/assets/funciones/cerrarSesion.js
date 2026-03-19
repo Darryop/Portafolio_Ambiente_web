@@ -1,11 +1,11 @@
 function CerrarSesion() {
     $.ajax({
-        url: '/Portafolio_Ambiente_web/Controllers/HomeController.php',
+        url: '/MN_ECC/Controllers/HomeController.php',
         method: 'POST',
         dataType: 'json',
         data: { btnCerrarSesion: true },
         success: function (response) {
-            window.location.href = '/Portafolio_Ambiente_web/Views/vHome/login.php';
+            window.location.href = '/MN_ECC/Views/vHome/login.php';
         }
     });
 };
